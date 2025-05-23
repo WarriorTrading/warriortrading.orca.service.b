@@ -27,4 +27,4 @@ COPY src/ src/
 
 RUN mvn clean package -Dmaven.test.skip=true -Dliba_version=${LIBA_VERSION}
 RUN cd target
-RUN java -jar libBApp-1.0-SNAPSHOT.jar
+RUN java -jar libBApp-1.0-SNAPSHOT-shaded.jar
