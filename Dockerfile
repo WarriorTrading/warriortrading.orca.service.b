@@ -25,4 +25,6 @@ RUN echo "<settings> \n\
 COPY pom.xml pom.xml
 COPY src/ src/
 
-RUN mvn clean package -Dliba_version=${LIBA_VERSION}
+RUN mvn clean package -Dmaven.test.skip=true -Dliba_version=${LIBA_VERSION}
+RUN cd target
+RUN java -jar java -jar libBApp-1.0-SNAPSHOT.jar
