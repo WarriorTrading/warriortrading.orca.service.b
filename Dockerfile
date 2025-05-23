@@ -28,4 +28,4 @@ COPY src/ src/
 RUN mvn clean package -Dmaven.test.skip=true -Dliba_version=${LIBA_VERSION}
 WORKDIR /workspace/target
 RUN ls -l /workspace/target
-RUN java -jar libBApp-1.0-SNAPSHOT-shaded.jar
+RUN java -jar serviceBApp-1.0-SNAPSHOT.jar
